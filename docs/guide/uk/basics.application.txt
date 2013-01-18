@@ -187,5 +187,3 @@ Yii визначає набір компонентів ядра, що надаю
       - запуск контролера;
 
    7. Виклик події [onEndRequest|CApplication::onEndRequest].
-
-<div class="revision">$Id: basics.application.txt 3251 2011-06-01 00:24:06Z qiang.xue $</div>

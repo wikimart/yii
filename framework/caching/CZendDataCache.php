@@ -4,7 +4,7 @@
  *
  * @author Steffen Dietz <steffo.dietz[at]googlemail[dot]com>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -17,7 +17,6 @@
  * See {@link CCache} manual for common cache operations that are supported by CZendDataCache.
  *
  * @author Steffen Dietz <steffo.dietz[at]googlemail[dot]com>
- * @version $Id$
  * @package system.caching
  */
 class CZendDataCache extends CCache

@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -14,7 +14,6 @@
  * CBaseListView implements the common features needed by a view wiget for rendering multiple models.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @version $Id$
  * @package zii.widgets
  * @since 1.1
  */
@@ -248,7 +247,7 @@ abstract class CBaseListView extends CWidget
 		$class='CLinkPager';
 		if(is_string($this->pager))
 			$class=$this->pager;
-		else if(is_array($this->pager))
+		elseif(is_array($this->pager))
 		{
 			$pager=$this->pager;
 			if(isset($pager['class']))

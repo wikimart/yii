@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -35,15 +35,14 @@
  * <li>{@link setValue}</li>
  * <li>{@link addValue}</li>
  * <li>{@link deleteValue}</li>
+ * <li>{@link getValues} (optional)</li>
  * <li>{@link flushValues} (optional)</li>
- * <li>{@link serializeValue} (optional)</li>
- * <li>{@link unserializeValue} (optional)</li>
+ * <li>{@link serializer} (optional)</li>
  * </ul>
  *
  * CCache also implements ArrayAccess so that it can be used like an array.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @version $Id$
  * @package system.caching
  * @since 1.0
  */

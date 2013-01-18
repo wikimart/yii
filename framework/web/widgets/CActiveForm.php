@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -141,7 +141,6 @@
  * the <code>performAjaxValidation</code> method and its invocation.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @version $Id$
  * @package system.web.widgets
  * @since 1.1.1
  */
@@ -346,7 +345,7 @@ class CActiveForm extends CWidget
 				$cs->registerCoreScript('jquery');
 				$cs->registerScript('CActiveForm#focus',"
 					if(!window.location.hash)
-						$('".$this->focus."').focus();
+						jQuery('".$this->focus."').focus();
 				");
 			}
 			return;
@@ -364,10 +363,13 @@ class CActiveForm extends CWidget
 		if($this->focus!==null)
 			$options['focus']=$this->focus;
 
+		if(!empty(CHtml::$errorCss))
+			$options['errorCss']=CHtml::$errorCss;
+		
 		$options=CJavaScript::encode($options);
 		$cs->registerCoreScript('yiiactiveform');
 		$id=$this->id;
-		$cs->registerScript(__CLASS__.'#'.$id,"\$('#$id').yiiactiveform($options);");
+		$cs->registerScript(__CLASS__.'#'.$id,"jQuery('#$id').yiiactiveform($options);");
 	}
 
 	/**

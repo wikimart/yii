@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -21,7 +21,6 @@
  * @property array $authItems The authorization items of the specific type.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @version $Id$
  * @package system.web.auth
  * @since 1.0
  */
@@ -178,7 +177,7 @@ class CPhpAuthManager extends CAuthManager
 	{
 		if(!isset($this->_items[$itemName]))
 			throw new CException(Yii::t('yii','Unknown authorization item "{name}".',array('{name}'=>$itemName)));
-		else if(isset($this->_assignments[$userId][$itemName]))
+		elseif(isset($this->_assignments[$userId][$itemName]))
 			throw new CException(Yii::t('yii','Authorization item "{item}" has already been assigned to user "{user}".',
 				array('{item}'=>$itemName,'{user}'=>$userId)));
 		else
@@ -257,7 +256,7 @@ class CPhpAuthManager extends CAuthManager
 					$items[$name]=$item;
 			}
 		}
-		else if(isset($this->_assignments[$userId]))
+		elseif(isset($this->_assignments[$userId]))
 		{
 			foreach($this->_assignments[$userId] as $assignment)
 			{

@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -13,7 +13,6 @@
  * You may invert the validation logic with help of the {@link not} property (available since 1.1.5).
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @version $Id$
  * @package system.validators
  * @since 1.0
  */
@@ -86,7 +85,7 @@ class CRegularExpressionValidator extends CValidator
 			$pattern .= preg_replace('/[^igm]/', '', $flag);
 
 		return "
-if(".($this->allowEmpty ? "$.trim(value)!='' && " : '').($this->not ? '' : '!')."value.match($pattern)) {
+if(".($this->allowEmpty ? "jQuery.trim(value)!='' && " : '').($this->not ? '' : '!')."value.match($pattern)) {
 	messages.push(".CJSON::encode($message).");
 }
 ";

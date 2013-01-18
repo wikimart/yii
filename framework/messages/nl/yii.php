@@ -15,8 +15,6 @@
  * of the guide for details.
  *
  * NOTE, this file must be saved in UTF-8 encoding.
- *
- * @version $Id: $
  */
 return array (
   'In order to use MIME-type validation provided by CFileValidator fileinfo PECL extension should be installed.' => 'Om de door CFileValidator aangeboden MIME-type validatie te gebruiken moet de fileinfo PECL extensie geïnstalleerd zijn',
@@ -255,5 +253,15 @@ return array (
   '{controller} cannot find the requested view "{view}".' => '{controller} kan de opgevraagde view "{view}" niet vinden.',
   '{controller} contains improperly nested widget tags in its view "{view}". A {widget} widget does not have an endWidget() call.' => '{controller} bevat ongeldig genestelde widget tags in z\'n view "{view}". De {widget} widget roept endWidget() niet aan.',
   '{controller} has an extra endWidget({id}) call in its view.' => '{controller} heeft een extra endWidget({id})-aanroep in z\'n view',
+  '{n} B' => '',
+  '{n} byte|{n} bytes' => '',
+  '{n} GB' => '',
+  '{n} gigabyte|{n} gigabytes' => '',
+  '{n} KB' => '',
+  '{n} kilobyte|{n} kilobytes' => '',
+  '{n} MB' => '',
+  '{n} megabyte|{n} megabytes' => '',
+  '{n} TB' => '',
+  '{n} terabyte|{n} terabytes' => '',
   '{widget} cannot find the view "{view}".' => '{widget} kan het viewbestand "{view}" niet vinden.',
 );

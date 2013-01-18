@@ -4,7 +4,7 @@
  *
  * @author Alexander Makarov <sam@rmcreative.ru>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -16,7 +16,6 @@
  * See {@link CCache} manual for common cache operations that are supported by CWinCache.
  *
  * @author Alexander Makarov <sam@rmcreative.ru>
- * @version $Id$
  * @package system.caching
  * @since 1.1.2
  */
@@ -50,7 +49,7 @@ class CWinCache extends CCache {
 	/**
 	 * Retrieves multiple values from cache with the specified keys.
 	 * @param array $keys a list of keys identifying the cached values
-	 * @return array a list of cached values indexed by the keys	 
+	 * @return array a list of cached values indexed by the keys
 	 */
 	protected function getValues($keys)
 	{

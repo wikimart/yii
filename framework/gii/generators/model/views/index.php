@@ -80,12 +80,12 @@ $('.form .row.model-class').toggle($('#{$class}_tableName').val().substring($('#
 			'options'=>array(
 				'minLength'=>'0',
 				'focus'=>new CJavaScriptExpression('function(event,ui) {
-					$("#'.CHtml::activeId($model,'tableName').'").val(ui.item.label);
+					$("#'.CHtml::activeId($model,'tableName').'").val(ui.item.label).change();
 					return false;
 				}')
 			),
 			'htmlOptions'=>array(
-				'id'=>'ModelCode_tableName',
+				'id'=>CHtml::activeId($model,'tableName'),
 				'size'=>'65'
 			),
 		)); ?>

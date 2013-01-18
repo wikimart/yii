@@ -372,6 +372,15 @@ $posts=Post::model()->findAll(array(
 
 Цей запит поверне всі записи разом із ухваленими коментарями. Тут `comments` відноситься до імені відношення. `recently` та `approved` - іменовані групи, описані у моделі `Comment`. Імʼя відношення і групи параметрів розділяються двокрапкою.
 
+Вам може знадобитися використовувати замість жадібної вибірки відкладену для
+звʼязку із групою умов. Синтаксис для цього такий:
+
+~~~
+[php]
+// імʼя звʼязку comments повторюється два рази
+$approvedComments = $post->comments('comments:approved');
+~~~
+
 Іменовані групи можуть бути використані при описі відношень моделі у методі [CActiveRecord::relations()] у параметрі `with`. У наступному прикладі при зверненні до `$user->posts` разом з публікаціями будуть отримані всі *ухвалені* коментарі.
 
 ~~~
@@ -420,6 +429,22 @@ $users=User::model()->findAll(array(
 		),
 	),
 ));
+
+class Post extends CActiveRecord
+{
+	......
+
+	public function rated($rating)
+	{
+		$this->getDbCriteria()->mergeWith(array(
+			'condition'=>'rating=:rating',
+			'params'=>array(':rating'=>$rating),
+		));
+		return $this;
+	}
+
+	......
+}
 ~~~
 
 Реляційні запити з through
@@ -556,5 +581,3 @@ class User extends CActiveRecord
 $teacher=User::model()->findByPk(1);
 $students=$teacher->students;
 ~~~
-
-<div class="revision">$Id: database.arr.txt 3523 2011-12-30 20:32:29Z alexander.makarow $</div>

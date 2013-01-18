@@ -4,7 +4,7 @@
  *
  * @author Steffen Dietz <steffo.dietz[at]googlemail[dot]com>
  * @link http://www.yiiframework.com/
- * @copyright Copyright &copy; 2008-2011 Yii Software LLC
+ * @copyright 2008-2013 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -19,7 +19,6 @@
  * This means if you still want to use this component, your eAccelerator should be of 0.9.5.x or lower version.
  *
  * @author Steffen Dietz <steffo.dietz[at]googlemail[dot]com>
- * @version $Id$
  * @package system.caching
  */
 class CEAcceleratorCache extends CCache
